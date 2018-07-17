@@ -239,6 +239,8 @@ iHeader.BillAddress_Country as 	'Bill To Country'	,
 ''as' VAT percentage'		,
 ''as 'Currency Exchange Rate'
 from [TestProject].[dbo].[invoiceBU] iHeader
+inner join [TestProject].[dbo].[invoicelinedetailBU] iDetails
+ON iHeader.TxnID = iDetails.IDKEY
 
 where iHeader.CustomerRef_ListId= '8000000B-1340212485'</value>
   </data>
