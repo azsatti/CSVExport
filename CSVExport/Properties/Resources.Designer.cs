@@ -61,7 +61,15 @@ namespace CSVExport.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to select [TxnID] ,[TxnNumber] ,[ShipAddress_City],CONVERT(char(10), [ShipDate],112) AS &apos;Ship Date&apos;,  cast(round([Subtotal],2) as numeric(36,2)) AS &apos;Sub Total&apos; from [TestProject].[dbo].[invoiceBU].
+        ///   Looks up a localized string similar to select &apos;supplied by D2L&apos; as CarrierID,
+        ///&apos;BHPV01&apos;as	ClientID,--supplied by D2L from email not sure if correct
+        ///&apos;D&apos;as &apos;Invoice Type&apos;,
+        ///iHeader.RefNumber as &apos;Invoice Number&apos;,
+        ///cast(round([Subtotal],2) as numeric(12,2)) as  &apos;Invoice total&apos;,
+        ///CONVERT(char(10), [ShipDate],112) as &apos;Invoice Date&apos;,--not sure if the same or use create date ?
+        ///&apos;&apos;as &apos;Shipment Number&apos;,--Unique carrier shipment #. E.g. Tracking #, BOL #, CRM #
+        ///CONVERT(char(10), [ShipDate],112) as &apos;Ship Date&apos; ,
+        ///&apos;&apos;as &apos;Bill-to Account&apos;,--Client account nu [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string SqlQuery {
             get {

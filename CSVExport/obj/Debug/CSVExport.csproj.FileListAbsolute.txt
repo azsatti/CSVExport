@@ -1,0 +1,12 @@
+c:\users\aftab.zaheer\source\repos\CSVExport\CSVExport\bin\Debug\CSVExport.exe.config
+c:\users\aftab.zaheer\source\repos\CSVExport\CSVExport\bin\Debug\CSVExport.exe
+c:\users\aftab.zaheer\source\repos\CSVExport\CSVExport\bin\Debug\CSVExport.pdb
+c:\users\aftab.zaheer\source\repos\CSVExport\CSVExport\bin\Debug\FluentFTP.dll
+c:\users\aftab.zaheer\source\repos\CSVExport\CSVExport\bin\Debug\FluentFTP.xml
+c:\users\aftab.zaheer\source\repos\CSVExport\CSVExport\obj\Debug\CSVExport.csprojResolveAssemblyReference.cache
+c:\users\aftab.zaheer\source\repos\CSVExport\CSVExport\obj\Debug\CSVExport.Form1.resources
+c:\users\aftab.zaheer\source\repos\CSVExport\CSVExport\obj\Debug\CSVExport.Properties.Resources.resources
+c:\users\aftab.zaheer\source\repos\CSVExport\CSVExport\obj\Debug\CSVExport.csproj.GenerateResource.Cache
+c:\users\aftab.zaheer\source\repos\CSVExport\CSVExport\obj\Debug\CSVExport.csproj.CoreCompileInputs.cache
+c:\users\aftab.zaheer\source\repos\CSVExport\CSVExport\obj\Debug\CSVExport.exe
+c:\users\aftab.zaheer\source\repos\CSVExport\CSVExport\obj\Debug\CSVExport.pdb

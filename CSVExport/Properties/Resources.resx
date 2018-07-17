@@ -118,6 +118,128 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="SqlQuery" xml:space="preserve">
-    <value>select [TxnID] ,[TxnNumber] ,[ShipAddress_City],CONVERT(char(10), [ShipDate],112) AS 'Ship Date',  cast(round([Subtotal],2) as numeric(36,2)) AS 'Sub Total' from [TestProject].[dbo].[invoiceBU]</value>
+    <value>select 'supplied by D2L' as CarrierID,
+'BHPV01'as	ClientID,--supplied by D2L from email not sure if correct
+'D'as 'Invoice Type',
+iHeader.RefNumber as 'Invoice Number',
+cast(round([Subtotal],2) as numeric(12,2)) as  'Invoice total',
+CONVERT(char(10), [ShipDate],112) as 'Invoice Date',--not sure if the same or use create date ?
+''as 'Shipment Number',--Unique carrier shipment #. E.g. Tracking #, BOL #, CRM #
+CONVERT(char(10), [ShipDate],112) as 'Ship Date' ,
+''as 'Bill-to Account',--Client account number.
+'L' as 'Weight Unit',-- accurate?
+iHeader.FOB as 'Billed Weight'	,--are all of weights accurate ? same no diffrence billed vs supplied ?
+iHeader.FOB as 'Actual Weight'	,--are all of weights accurate ? same no diffrence billed vs supplied ?
+iHeader.FOB as 'Dim Weight'	,--are all of weights accurate ? same no diffrence billed vs supplied ?
+''as 'Volume'	,
+''as 'Pieces'	,
+''as 'Package type'	,
+''as 'Loading meters'	,
+''as 'Service Type'	,
+''as 'ServiceZone'	,
+'O'as 'Direction',--I/O/3--make sure with jonathan this is correct  o for outbound
+'M'as 'Mode',--AIR/OCEAN/LT/M(truck load)/RAIL		
+''as 'Payment Terms'		,--PP/CC/TP   --Which code to use for check ?
+''as 'Inco terms'	,
+''as 'Distance qualifier'	,
+''as 'Distance'  	,
+''as 'Bill Of Lading'		,
+''as 'MAWB'		,
+''as 'HAWB'		,
+iHeader.PONumber as 'PO Number'		,
+''as 'Reference number'		,
+'' as 'Delivery Date'		,
+''as 'Delivery Time'		,
+''as 'POD Name'		,
+''as 'Notes'	,
+''as 'Origin (Air)Port'		,
+''as 'Destination (Air)Port'		,
+''as 'Shipper Location'		,
+'' as 'Shipper Name'		,
+''as 'Shipper Company'		,
+iHeader.BillAddress_Addr1 as 'Shipper Address1'		,
+iHeader.BillAddress_Addr2 as 'Shipper Address2'		,
+iHeader.BillAddress_Addr3 as 'Shipper Address3'		,
+iHeader.BillAddress_City as 'Shipper City'		,
+iHeader.BillAddress_State as 'Shipper State'		,
+iHeader.BillAddress_PostalCode as 'Shipper Postcode'		,
+'US' as 'Shipper Country'		,
+
+''as 'Consignee Location'		,
+''as 'Consignee Name'		,
+''as 'Consignee Company'		,
+iHeader.ShipAddress_Addr1 as 'Consignee Address1'		,
+iHeader.ShipAddress_Addr2 as 'Consignee Address2'		,
+iHeader.ShipAddress_Addr3 as 'Consignee Address3'		,
+iHeader.ShipAddress_City as 'Consignee City'		,
+iHeader.ShipAddress_State as 'Consignee State'		,
+iHeader.ShipAddress_PostalCode as 'Consignee Postcode'		,
+'US' as 'Consignee Country'		,
+
+''as 'Amount Billed'	,--
+''as 'Freight Amount'		,----'one man','two man' ,'box truck'
+''as 'Freight VAT code'		,
+''as 'Discount Amount'	,
+''as 'Discount VAT Code'	,
+''as 'Total Shipment VAT Amount'		,
+--'one man','two man' ,'box truck' are the regualr charges and Accessorial  charges will be the additnial lines so the first line item will be in the Freight Amount 
+''as 'Accessorial Charge Code1'		,
+''as 'Accessorial Charge Amount1'		,
+''as 'Accessorial 1 VAT code'		,
+
+''as 'Accessorial Charge Code2'		,
+''as 'Accessorial Charge Amount2'		,
+''as 'Accessorial 2 VAT code'	,
+
+''as 'Accessorial Charge Code3'		,
+''as 'Accessorial Charge Amount3'		,
+''as 'Accessorial 3 VAT code',
+
+''as 'Accessorial Charge Code4'		,
+''as 'Accessorial Charge Amount4'		,
+''as 'Accessorial 4 VAT code'	,
+
+''as 'Accessorial Charge Code5'		,
+''as 'Accessorial Charge Amount5'		,
+''as 'Accessorial 5 VAT code'	,
+
+''as 'Accessorial Charge Code6'		,
+''as 'Accessorial Charge Amount6'	,
+''as 'Accessorial 6 VAT code'	,
+
+''as 'Accessorial Charge Code7'		,
+''as 'Accessorial Charge Amount7'		,
+''as 'Accessorial 7 VAT code'	,
+
+''as 'Accessorial Charge Code8'	,
+''as 'Accessorial Charge Amount8'		,
+''as 'Accessorial 8 VAT code'		,
+
+''as 'Accessorial Charge Code9'		,
+''as 'Accessorial Charge Amount9'		,
+''as 'Accessorial 9 VAT code'	,
+
+''as 'Accessorial Charge Code10'		,
+''as 'Accessorial Charge Amount10',	
+''as 'Accessorial 10 VAT code'	,
+''as 	'Currency'		,
+''as 'Bill to Location'	,
+''as 	'Bill To Company'	,
+iHeader.BillAddress_Addr1 as 	'Bill To Address1'	,
+ iHeader.BillAddress_Addr1 as 	'Bill To Address2'	,
+iHeader.BillAddress_City as 	'Bill To City'	,
+iHeader.BillAddress_State as 	'Bill To State'	,
+iHeader.BillAddress_PostalCode as 	'Bill To Postcode'	,
+iHeader.BillAddress_Country as 	'Bill To Country'	,
+''as  	'Equipment Type'	,
+''as 'Container number'		,
+''as 'Trailer/Car ID'		,
+''as 'carrier VAT number'		,
+''as 'CLIENT VAT NUMBER'		,
+''as' VAT percentage'		,
+''as 'Currency Exchange Rate'
+from [TestProject].[dbo].[invoiceBU] iHeader
+
+where iHeader.CustomerRef_ListId= '8000000B-1340212485'</value>
   </data>
 </root>
