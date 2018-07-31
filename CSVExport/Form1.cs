@@ -39,7 +39,7 @@ namespace CSVExport
             client.UploadFile(Settings.Default.ExportFileName,
                 Settings.Default.RemotFTPFilePath);
         }
-
+        //need to pass along from and to date
         private bool ExportToCsv()
         {
             var streamWriter = new StreamWriter(Settings.Default.ExportFileName);
