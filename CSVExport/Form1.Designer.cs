@@ -41,7 +41,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 49);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Export";
+            this.button1.Text = "Export_";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -50,7 +50,7 @@
             this.dtFromDate.Checked = false;
             this.dtFromDate.Location = new System.Drawing.Point(143, 85);
             this.dtFromDate.Name = "dtFromDate";
-            this.dtFromDate.Size = new System.Drawing.Size(145, 20);
+            this.dtFromDate.Size = new System.Drawing.Size(181, 20);
             this.dtFromDate.TabIndex = 1;
             this.dtFromDate.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
@@ -59,7 +59,7 @@
             this.dtToDate.Checked = false;
             this.dtToDate.Location = new System.Drawing.Point(143, 127);
             this.dtToDate.Name = "dtToDate";
-            this.dtToDate.Size = new System.Drawing.Size(145, 20);
+            this.dtToDate.Size = new System.Drawing.Size(181, 20);
             this.dtToDate.TabIndex = 2;
             this.dtToDate.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 

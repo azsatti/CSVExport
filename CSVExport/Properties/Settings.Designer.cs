@@ -25,18 +25,7 @@ namespace CSVExport.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=WS-963\\SQLEXPRESS;Initial Catalog=TestProject;Integrated Security=Tru" +
-            "e")]
-        public string DBConnectionString {
-            get {
-                return ((string)(this["DBConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(" ftp3.data2logisitcs.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ftp3.data2logistics.com")]
         public string FTPServer {
             get {
                 return ((string)(this["FTPServer"]));
@@ -45,7 +34,7 @@ namespace CSVExport.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("username")]
+        [global::System.Configuration.DefaultSettingValueAttribute("MFU91")]
         public string FTPUserName {
             get {
                 return ((string)(this["FTPUserName"]));
@@ -54,7 +43,7 @@ namespace CSVExport.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("password")]
+        [global::System.Configuration.DefaultSettingValueAttribute("foSpI9uz")]
         public string FTPPassword {
             get {
                 return ((string)(this["FTPPassword"]));
@@ -75,10 +64,20 @@ namespace CSVExport.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("path")]
+        [global::System.Configuration.DefaultSettingValueAttribute("/Inbound")]
         public string RemotFTPFilePath {
             get {
                 return ((string)(this["RemotFTPFilePath"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=WS1\\SQLEXPRESS;Initial Catalog=TestProject;Integrated Security=True")]
+        public string DBConnectionString {
+            get {
+                return ((string)(this["DBConnectionString"]));
             }
         }
     }

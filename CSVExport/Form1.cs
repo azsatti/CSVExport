@@ -11,6 +11,7 @@ namespace CSVExport
     using System.Net;
     using FluentFTP;
     using Properties;
+    using System.Diagnostics;
 
     public partial class Form1 : Form
     {
@@ -35,9 +36,19 @@ namespace CSVExport
             {
                 client.DeleteFile(Settings.Default.RemotFTPFilePath + Settings.Default.ExportFileName); // Remove existing file if exists
             }
+            try
+            {
+               // var t=client.DirectoryExists("/Inbound"); ;
 
-            client.UploadFile(Settings.Default.ExportFileName,
-                Settings.Default.RemotFTPFilePath);
+                client.UploadFile(Settings.Default.ExportFileName, "/Inbound/export.csv");
+            }
+            catch (Exception ex)
+            {
+
+                //throw ex;
+                Debug.WriteLine("");
+            }
+            
         }
         //need to pass along from and to date
         private bool ExportToCsv()
@@ -55,8 +66,12 @@ namespace CSVExport
                 var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString);
                 sqlCommand.Connection = connection;
                 sqlCommand.CommandTimeout = 0;
+
                 sqlCommand.CommandType = CommandType.Text;
                 sqlCommand.CommandText = query;
+
+                sqlCommand.Parameters.AddWithValue("@FromDate", dtFromDate.Value.Date.ToShortDateString());
+                sqlCommand.Parameters.AddWithValue("@ToDate", dtToDate.Value.Date.ToShortDateString());
                 connection.Open();
                 using (connection)
                 {
